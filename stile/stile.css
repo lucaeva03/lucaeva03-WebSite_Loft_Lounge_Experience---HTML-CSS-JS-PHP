@@ -1,0 +1,948 @@
+/* ---------------------------- IMPORTAZIONE GOOGLE FONT ---------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+/* ---------------------------- PROPRIETA' GENERALI - BODY --------------------------------- */
+
+body {
+    margin: 0;
+    background-color: #000000; 
+    font-family: 'Great Vibes', cursive; 
+    color: #ffffff; 
+}
+
+/* Seleziona tutti i link tranne menu e footer che devono rimanere spenti*/
+body a:not(nav a):not(footer a){ 
+    text-decoration: none; 
+    color: #ffff00; 
+    text-shadow:0 0 5px #00FFFF, 
+                0 0 10px #00FFFF, 
+                0 0 20px #00FFFF, 
+                0 0 40px #0FF;    
+}
+
+/* Da effetto neon alla sezione corrente del menu*/
+.selezionato{
+    color: #ffff00; 
+    text-shadow:0 0 5px #00FFFF,  
+                0 0 10px #00FFFF, 
+                0 0 20px #00FFFF, 
+                0 0 40px #0FF;   
+}
+
+/* ---------------------------------------- MENU' ------------------------------------------ */
+
+header nav {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    text-align: center; 
+    background-color: #000000; 
+    border-bottom: 1px solid #ffffff; 
+    z-index: 100; 
+}
+
+header nav ul {
+    margin: 0; 
+    padding: 0; 
+}
+
+
+header nav ul li {
+    display: inline; /* Dispone il menu in orizzontale */
+}
+
+header nav ul li:last-child{
+    margin-right: 15.2%; /* Margine destro dall'ultimo elemento */
+}
+
+header nav ul li a {
+    padding: 2% 1%;
+    margin: 0% 1%; 
+    color: white; 
+    font-size: 200%;
+    text-decoration: none; 
+    line-height: 1; /* Riduce lo spazio verticale */
+    position: relative; /* Per consentire spostamenti con `top` */
+    top: -1.2em; /* Sposta le scritte verso l'alto */
+}
+
+header nav ul li a:hover {
+    color: #00ffff; 
+    text-shadow:0 0 5px #00FFFF,  
+                0 0 10px #00FFFF, 
+                0 0 20px #00FFFF, 
+                0 0 40px #0FF;   
+}
+
+header nav ul li img {
+    width: 15%; 
+    height: auto; 
+    margin-right: 7.8%; /* Margine dalla prima voce del menu */
+}
+
+/* ------------------------------------- MENU TENDINA ---------------------------------------- */
+
+nav ul li {
+    position: relative; /* Posiziona i sottomenù sotto ogni voce associata*/
+    padding: 1% 0%; /* Aggiunta padding al menu principale per far rimanere aperto il sottomenu quando si scende con il mouse */
+}
+
+nav ul li a {
+    position: relative;
+    z-index: 90; 
+    padding: 0;
+    margin: 0; 
+}
+
+nav ul li ul{
+    display: none; 
+    position: absolute; 
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-50%); /* Centra rispetto al link */
+    background-color: rgba(15, 13, 14); 
+    z-index: 80; 
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0); 
+    list-style: none; 
+    width: 7.375em; 
+    border: 0.0625em solid rgba(255, 255, 255, 0.8); 
+    border-radius: 0em 0em 0.5em 0.5em; 
+    padding: 0.5em 0;
+}
+
+nav ul li ul li a {
+    display: block; 
+    text-decoration: none; 
+    color: #ffffff; 
+    top: 15%; 
+    font-size: 150%; 
+    text-align: center; 
+}
+
+nav ul li ul li:first-child a { /* Distanziamento prima voce del sottomenu */
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.menu ul li ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:hover > ul {
+    display: block; 
+}
+
+
+.logo img{
+    width: 9%; 
+    height: auto; 
+}
+
+/* ------------------------------------- TITOLO ---------------------------------------- */
+
+.sezione-titolo {
+    background-image: url('../img/Background-Home.jpg');
+    background-size: cover; 
+    background-position: center; 
+    margin-top: 7%;
+    height: 39em;
+    display: block; 
+    text-align: right; 
+}
+
+.sezione-titolo h1 {
+    font-size: 1200%;
+    padding-right: 22%;
+    padding-top: 6%; 
+    margin: 0%;
+    text-shadow: 2px 2px 7px rgba(255, 234, 0, 0.5); 
+   
+}
+
+.sezione-titolo h2 {
+    font-size: 500%; 
+    padding-right: 15%; 
+    margin: 0%; 
+    text-shadow: 2px 2px 7px rgba(255, 234, 0, 0.5); 
+}
+
+.sezione-titolo p {
+    font-size: 250%; 
+    text-align: center; 
+    margin-top: 8%;
+}
+
+/* ------------------------------------- GENERALE-SEZIONI-INDEX ---------------------------------------- */
+
+.sezioni-index {
+    padding: 3% 0%;
+}
+
+.sezioni-titolo-index{
+    font-size: 350%; 
+    text-align: center; 
+    margin-bottom: 1%; 
+    margin-top: 0%; 
+}
+
+.sezioni-intro-index{
+    font-family: 'Allura', cursive;
+    margin: 0% 10%; 
+    text-align: center; 
+    font-size: 200%
+}
+
+.sezioni-outro-index{
+    font-family: 'Allura', cursive;
+    margin: 2% 10%; 
+    text-align: center; 
+    font-size: 200%
+}
+
+.sezioni-sottotitolo-index{
+    padding-top: 2%; 
+    margin-bottom: 1%;
+    font-size: 250%;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.sezioni-bianco-index {
+    padding: 3% 0%; 
+    background-color: #ffffff; 
+    color:#000000; 
+}
+
+.sezioni-bianco-index a {
+    color: #005000; 
+    text-shadow: 0 0 5px #00ff00,   
+                0 0 10px #00ff00, 
+                0 0 20px #00cc00,  
+                0 0 40px #008000;  
+}
+
+/*--------------------------------CHI SIAMO-INDEX----------------------------------------*/
+
+.sezioni-schede-index {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+.scheda {
+    background-color: #ffffff;
+    border-radius: 2em;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    overflow: hidden; /* Nasconde il contenuto che esce dai bordi arrotondati */
+    width: 25%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 2% 0% 0% 0%;
+}
+
+.scheda img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dddddd;
+}
+
+.scheda p {
+    padding: 4% 0%;
+    margin: 0;
+    font-family: 'Allura', cursive;
+    font-size: 150%;
+    color: #000000;
+}
+
+.scheda:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+}
+
+.scheda a{
+    color: #000000;
+    text-shadow: none;
+}
+
+/* ------------------------------------- LOCATION-INDEX ---------------------------------------- */
+
+.sezioni-corpo-video-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.sezioni-video-index {
+    margin: 0% 1%;
+    width: 22%;;
+}
+
+.sezioni-video-index video {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sezioni-testo-video-index {
+    margin: 0% 1%;
+    width: 40%;
+    padding: 0% 2%;
+    font-family: 'Allura', cursive;
+    font-size: 200%;
+    color: #000000;
+    text-align: center;
+}
+
+.sezioni-testo-video-index p {
+    margin: 0%;
+}
+
+/* ------------------------------------- EVENTI-INDEX ---------------------------------------- */
+
+.sezioni-eventi-index {
+    width: 70%; 
+    overflow: hidden; /* Nasconde le immagini che escono dal contenitore */
+    position: relative; 
+    margin: 0% 15%; 
+}
+
+.sezioni-carosello-eventi-index {
+    flex-wrap: nowrap; /* Impedisce l'andare a capo delle immagini e quindi le fa uscire dal contenitore*/
+}
+
+.sezioni-carosello-eventi-index ul {
+    display: flex; /* Mette gli elementi della lista in riga*/
+    padding: 1% 0%; 
+    margin: 0; 
+    list-style: none; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.sezioni-carosello-eventi-index li {
+    flex: 0 0 26.9%; /* Ogni contenitore dell'immagine occupa un terzo più lo spazio della larghezza totale*/
+}
+
+.sezioni-carosello-eventi-index img {
+    width: 70%; /* Larghezza dell'immagine rispetto al contenitore */
+    height: auto; 
+    display: block; /* Rimuove lo spazio sotto l'immagine */
+    border-radius: 1em; 
+    border: #ffffff 3px solid;  
+}
+
+/* ------------------------------------- MENU-INDEX ---------------------------------------- */
+
+.sezioni-menu-index{
+    display: flex; 
+    flex-direction: row; 
+    align-content: center; 
+    margin: 0% 10%; 
+    gap: 5%; 
+    position: relative; /*Per posizionare la riga di mezzo*/
+}
+
+.sezioni-menu-index::before {  /* Creazione e posizionamento linea di mezzo */
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 50%; 
+    width: 1px; 
+    background-color: rgb(0, 0, 0); 
+    transform: translateX(-50%); 
+}
+
+.sezioni-menu-index h5{
+    font-size: 200%; 
+    text-align: center; 
+    margin-bottom: 3%; 
+    margin-top: 0%; 
+}
+
+.sezioni-menu-sotto-index{
+    width: 50%; 
+    text-align: center;
+}
+
+.sezioni-voci-menu-index{
+    display: flex; 
+    flex-direction: row; 
+    align-content: center; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5%; 
+    margin-bottom: 5%;
+}
+
+.sezioni-menu-index img{
+    width: 50%; 
+    height: auto; 
+    border-radius: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sezioni-menu-sotto-index p{
+    font-family: 'Allura', cursive;
+    font-size: 170%; 
+}
+
+/* --------------------------------- PRENOTAZIONE-INDEX ---------------------------------------- */
+
+.sezioni-prenotazione-index {
+    padding: 3% 0%; 
+}
+
+.sezioni-prenotazione-index h2 {
+    font-size: 500%; 
+    text-align: center; 
+    margin: 0%; 
+}
+
+.sezioni-prenotazione-index p {
+    font-family: 'Allura', cursive;
+    font-size: 200%; 
+    text-align: center; 
+    margin-bottom: 1%; 
+    margin-top: 0%; 
+}
+
+.sezioni-prenotazioni-form-index p{
+    font-size: 150%; 
+    margin: 1% 0% 0% 0%;
+}
+
+
+.sezioni-prenotazioni-form-index div{
+    display: flex; 
+    flex-direction: row; 
+    margin: 0% 20%; 
+}
+
+.sezioni-prenotazioni-form-index div div{
+    display: flex; 
+    flex-direction: column; 
+    width: 50%; 
+    margin: 0% 5%; 
+}
+
+.sezioni-prenotazioni-form-index label{
+    font-size: 150%; 
+    margin: 3% 0% 0% 0%; 
+}
+
+.sezioni-prenotazioni-form-index button {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 0.5% 1%; 
+    font-family: 'Allura', cursive;
+    text-align: center; 
+    justify-content: center;
+    text-decoration: none; 
+    font-size: 200%; 
+    margin: 1% 0% 0% 46.5%; 
+    border-radius: 0.3em; 
+}
+
+.sezioni-prenotazioni-form-index button:hover {
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse a mano */
+    color: #005000; 
+    transform: scale(1.05); 
+    box-shadow: 0 0 5px #008100, 
+                0 0 10px #007000, 
+                0 0 20px #008300; 
+}
+
+input{
+    appearance: none; 
+    background-color: #ffffff; 
+    border: 2px solid #cccccc; 
+    border-radius: 0.5em; 
+    padding: 1.5% 2%; 
+    font-size: 100%; 
+    color: #000000; 
+    width: 100%; 
+    box-sizing: border-box; /* Include il padding e il bordo nella larghezza totale */
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #006f00;
+    outline: none; 
+}
+
+/* ------------------------------------- FOOTER ---------------------------------------- */
+
+footer {
+    background-color: #ffffff; 
+    color:#000000; 
+    padding: 2% 0%; 
+    display: flex; 
+    flex-direction: row; 
+    text-align: center; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 120%;
+}
+
+footer div{
+    width: 22%; 
+}
+
+.footer-posizione iframe{
+    width: 80%; 
+    height: auto; 
+    border-radius: 10%;
+    border: #000000 3px solid; 
+}
+
+.footer-social a{
+    color: black; 
+    text-decoration: none; 
+    display: block; 
+}
+
+.footer-social img {
+    width: 10%; 
+    height: auto; 
+}
+
+.footer-social a:nth-child(3){ /* Margine tra i due social */
+    margin-top: 5%; 
+}
+
+.footer-nero{
+    background-color: #000000; 
+    color:#ffffff; 
+    padding: 2% 0%; 
+    display: flex; 
+    flex-direction: row; 
+    text-align: center; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 120%;
+}
+
+.footer-nero iframe{
+    border: #ffffff 3px solid; 
+}
+
+.footer-nero a{
+    color: #ffffff; 
+}
+
+/* ------------------------------------- SEZIONI-PAGINE ---------------------------------------- */
+
+.prima-sezioni-pagine{
+    margin-top: 7%;
+    padding: 2% 0%; 
+    background-color: #ffffff; 
+    color:#000000; 
+}
+
+.prima-sezioni-pagine a img{
+    border: #000000 3px solid; 
+}
+
+.sezioni-pagine {
+    padding: 3% 0%; 
+}
+
+.sezioni-titolo-pagine{
+    font-size: 400%; 
+    text-align: center; 
+    margin-bottom: 1%;
+    margin-top: 0%; 
+}
+
+.sezioni-intro-pagine{
+    font-family: 'Allura', cursive;
+    margin: 0% 10%; 
+    text-align: center; 
+    font-size: 200%
+}
+
+.sezioni-outro-pagine{
+    font-family: 'Allura', cursive;
+    margin: 2% 10%; 
+    text-align: center; 
+    font-size: 200%
+}
+
+.sezioni-sottotitolo-pagine{
+    padding-top: 2%; 
+    margin-bottom: 1%; 
+    font-size: 250%; 
+    text-align: center; 
+    margin-top: 0%;
+}
+
+.sezioni-corpo-pagine {
+    display: flex; 
+    flex-direction: row; 
+    align-content: center; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0% 10%;
+    gap: 5%; 
+}
+
+.sezioni-testo-pagine{
+    width: 70%; 
+    font-size: 210%; 
+    text-align: center; 
+    font-family: 'Allura', cursive;
+}
+
+.sezioni-immagine-pagine{
+    width: 50%; 
+}
+
+.sezioni-immagine-pagine img{
+    width: 100%; 
+    height: auto; 
+    border-radius: 10%;
+}
+
+.sezioni-bianco-pagine {
+    padding: 3% 0%;
+    background-color: #ffffff; 
+    color:#000000;
+}
+
+.sezioni-bianco-pagine a {
+    color: #005000;
+    text-shadow: 0 0 5px #00ff00, 
+                0 0 10px #00ff00, 
+                0 0 20px #00cc00,
+                0 0 40px #008000;
+}
+
+.prima-sezioni-pagine a {
+    color: #005000;
+    text-shadow: 0 0 5px #00ff00,
+                0 0 10px #00ff00, 
+                0 0 20px #00cc00,
+                0 0 40px #008000;
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-EVENTI ---------------------------------------- */
+
+.sezioni-eventi-calendario {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    margin: 0% 10%;
+}
+
+.sezioni-eventi-calendario iframe {
+    width: 80%; 
+    height: 25em; 
+    border: none; 
+    border-radius: 1em; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+    
+}
+
+.sezioni-eventi-calendario iframe:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-FOTO ---------------------------------------- */
+
+.sezione-eventi-foto {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.carta {
+    width: 20%;
+    height: 25em;
+    perspective: 40em; /* Gestisce la profondità */
+}
+
+.contenitore-carta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s;
+    transform-style: preserve-3d; /* Mantiene l'effetto 3D per gli elementi figli */
+}
+
+.contenitore-carta img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
+
+.carta-fronte, .carta-retro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1em;
+}
+
+.carta-retro {
+    transform: rotateY(180deg);
+}
+
+.bordo-bianco{
+    box-shadow: 0 0.5em 0.5em rgba(255, 255, 255, 0.2); 
+}
+
+.bordo-nero{
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5); 
+}
+
+
+/* ------------------------------------- SEZIONI-PAGINE-CONTATTI ---------------------------------------- */
+
+.sezioni-contatti-social {
+    display: flex; 
+    flex-direction: row; 
+    align-content: center; 
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.sezioni-contatti-social a{
+    width: 5%;
+    margin: 1% 1%;
+}
+
+.sezioni-contatti-social img{
+    width: 100%; 
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-LOCATION ---------------------------------------- */
+
+.sezioni-street-view iframe{
+    width: 30em; 
+    height: 20em; 
+    border-radius: 15%;
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-MENU ---------------------------------------- */
+
+.sezioni-testo-menu-pagine{
+    font-family: 'Allura', cursive;
+    font-size: 250%; 
+    padding: 1.5% 0% 0% 0%;
+}
+
+.sezioni-testo-menu-pagine button {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 3% 1%; 
+    font-family: 'Allura', cursive;
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 100%; 
+    border-radius: 0.5em;
+}
+
+.sezioni-testo-menu-pagine button:hover {
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse a mano */
+    color: #005000; 
+    transform: scale(1.05); 
+    box-shadow: 0 0 5px #008100, 
+                0 0 10px #007000, 
+                0 0 20px #008300; 
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-CONFERMA ---------------------------------------- */
+
+.prima-sezioni-pagine-conferma{
+    margin-top: 7%;
+    padding: 13% 0%; 
+    background-color: #ffffff; 
+    color:#000000; 
+}
+
+.prima-sezioni-pagine-conferma a{
+    color: #005000; 
+    text-shadow: 0 0 5px #00ff00,   
+                0 0 10px #00ff00, 
+                0 0 20px #00cc00,  
+                0 0 40px #008000;  
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-PRENOTA ---------------------------------------- */
+
+
+.sezioni-prenotazione-pagina h2 {
+    font-size: 500%; 
+    text-align: center; 
+    margin: 0%; 
+}
+
+.sezioni-prenotazione-pagina p {
+    font-family: 'Allura', cursive;
+    font-size: 200%; 
+    text-align: center; 
+    margin-bottom: 1%; 
+    margin-top: 0%; 
+
+}
+
+.sezioni-prenotazioni-form-index p{
+    font-size: 150%; 
+    margin: 1% 0% 0% 0%; 
+}
+
+.sezioni-prenotazione-pagina button {
+    border: black 1px solid; 
+}
+
+/* ------------------------------------- SEZIONI-PAGINE-IN-COSTRUZIONE ---------------------------------------- */
+
+.sezione-in-costruzione {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sezione-in-costruzione img {
+    margin-top: 1%;
+    width: 35%;
+    height: auto;
+}
+
+/* ------------------------------------- MEDIA QUERY 1024px ---------------------------------------- */
+
+@media (max-width: 1024px) {
+
+    /*--------------------MENU-INDEX----------------------*/
+    
+    header nav ul li:last-child{
+        margin-right: 0%; 
+    }
+    
+    header nav ul li a {
+        top: -0.7em; 
+    }
+    
+    header nav ul li img {
+        margin-right: 0%; 
+    }
+
+    /*--------------------TITOLO----------------------*/
+
+    .sezione-titolo {
+        height: 33em; 
+    
+    }
+    
+    .sezione-titolo h1 {
+        padding-right: 18%; 
+       
+    }
+    
+    .sezione-titolo h2 {
+        padding-right: 7%; 
+    }
+    
+    .sezione-titolo p {
+        font-size: 250%; 
+        text-align: center; 
+        margin-top: 7%;
+    
+    }
+
+    /*--------------------SEZIONI-INDEX----------------------*/
+
+    .sezioni-intro-index{
+        margin: 0% 5%; 
+        font-size: 150%
+    }
+    
+    .sezioni-outro-index{
+        margin: 1% 5%; 
+        font-size: 150%
+    }
+
+    /*--------------------LOCATION----------------------*/
+
+    .sezioni-corpo-video-index {
+        margin: 0 5%;
+    }
+
+    /* Contenitore del video */
+    .sezioni-video-index {
+        margin: 0% 0.5%;
+        width: 20%;;
+    }
+
+    /* Contenitore del testo */
+    .sezioni-testo-video-index {
+        padding: 0% 1%;
+        font-size: 150%;
+    }
+
+    /*--------------------PRENOTAZIONE----------------------*/
+
+    .sezioni-prenotazione-index p{
+        font-size: 150%;
+        margin-bottom: 0;
+    }
+
+    /*--------------------FOOTER----------------------*/
+
+    .footer {
+        font-size: 95%;
+    }
+
+    .footer-nero {
+        font-size: 95%;
+    }
+
+    /*--------------------SEZIONI-PAGINE----------------------*/
+
+    .sezioni-testo-pagine{
+        width: 70%; 
+        font-size: 160%;
+    }
+
+    /*--------------------SEZIONI-PAGINE-EVENTI----------------------*/
+    .carta {
+        height: 20em;
+    }
+
+    /*--------------------SEZIONI-PRENOTAZIONI----------------------*/
+    .sezioni-prenotazione-pagina p{
+        font-size: 150%; 
+        margin-bottom: 0;
+    }
+
+    /*--------------------SEZIONI-PAGINE-CONTATTI----------------------*/
+    .sezioni-contatti-social img{
+        margin: 3% 1%; 
+    }
+
+    /*--------------------SEZIONI-PAGINE-IN-COSTRUZIONE----------------------*/
+
+    .sezione-in-costruzione{
+        margin: 4% 0%;
+    }
+
+    /*--------------------SEZIONI-PAGINE-CONFERMA----------------------*/
+    .prima-sezioni-pagine-conferma{
+        padding-bottom: 20%;
+    }
+
+}

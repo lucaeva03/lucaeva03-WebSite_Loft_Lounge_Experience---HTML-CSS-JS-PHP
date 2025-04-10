@@ -1,0 +1,8 @@
+Username: email
+Password: Kelly.eva12
+
+Credenziali sito Loft:
+$servername = "sql206.infinityfree.com";
+$username = "if0_38100558";
+$password = "lucaeva03";
+$dbname = "if0_38100558_prenotazioni_loft";

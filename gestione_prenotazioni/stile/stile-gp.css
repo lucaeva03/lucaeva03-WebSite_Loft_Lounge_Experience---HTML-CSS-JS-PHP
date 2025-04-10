@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2%;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 2%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Unisce i bordi delle celle */
+    margin: 2% 0;
+    font-size: 130%;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 1%;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin: 0.2em;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #930000;
+}
+
+.centro {
+    text-align: center;
+}
+
+/* --------------------------- MEDIA QUERIES --------------------------- */
+
+@media (max-width: 1024px) {
+    body {
+        margin: 0% 2%;
+    }
+
+    h1 {
+        font-size: 150%;
+    }
+
+    table {
+        font-size: 100%;
+    }
+
+    th, td {
+        padding: 1%; 
+        word-wrap: break-word; /* Permette di andare a capo dividendo la parola */
+        max-width: 8em;
+    }
+
+    button {
+        padding: 0.4em 0.8em;
+        margin: 0.1em;
+        font-size: 0.8em;
+        border-radius: 0.5em;
+    }
+}

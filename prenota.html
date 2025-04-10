@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione - Loft Lounge Experience</title>  
+    <link rel="stylesheet" href="stile/stile.css"> 
+    <script src="js/limitazione_prenotazione.js"></script>
+</head>
+
+<body>
+
+    <header>        
+        <nav class="menu">
+            <ul>
+                <li class="logo"><img src="img/Logo.png" alt="Logo"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chisiamo.html">Chi siamo</a>
+                    <ul>
+                        <li><a href="chisiamo_storia.html">Storia</a></li>
+                        <li><a href="chisiamo_staff.html">Staff</a></li>
+                    </ul>
+                </li>
+                <li><a href="location.html">Location</a>
+                    <ul>
+                        <li><a href="location_locale.html">Locale</a></li>
+                        <li><a href="location_posizione.html">Posizione</a></li>
+                    </ul>
+                </li>
+                <li><a href="eventi.html">Eventi</a>
+                    <ul>
+                        <li><a href="eventi_prossimi.html">Prossimi</a></li>
+                        <li><a href="eventi_foto.html">Foto</a></li>
+                    </ul>
+                </li>
+                <li><a href="menu.html">Menu</a>
+                    <ul>
+                        <li><a href="menu_cocktail.html">Cocktail</a></li>
+                        <li><a href="menu_food.html">Food</a></li>
+                    </ul> 
+                </li>
+                <li><a href="prenota.html" class="selezionato">Prenota</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <div class="prima-sezioni-pagine">
+        
+        <div class="sezioni-prenotazione-pagina">
+            <h2 class="sezioni-titolo-index">Prenotazione</h2>
+                <p> 
+                    Aperto tutti i giorni: <br>
+                    Lunedì - Venerdì: 18:00 - 02:00 <br> 
+                    Sabato - Domenica: 15:00 - 04:00
+                </p>
+
+                <form class="sezioni-prenotazioni-form-index" action="php/prenotazioni.php" method="POST">                
+                    <div>
+                        <div>
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required minlength="2" maxlength="30">
+                            
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required minlength="2" maxlength="50">
+                            
+                            <label for="telefono">Telefono:</label>
+                            <input type="tel" id="telefono" name="telefono" required minlength="6" maxlength="15">    
+                        </div>    
+                        <div>
+                            <label for="data_prenotazione">Data:</label>
+                            <input type="date" id="data_prenotazione" name="data_prenotazione" required>
+                            
+                            <label for="ora_prenotazione">Ora:</label>
+                            <input type="time" id="ora_prenotazione" name="ora_prenotazione" required min="18:00" max="23:59">
+
+                            <label for="numero_persone">Numero di Persone:</label>
+                            <input type="number" id="numero_persone" name="numero_persone" min="1" required>
+                        </div>
+                    </div>
+                    <p>Prenotazioni accettate solo a partire dal giorno successivo tra le 18:00 e le 00:00</p>                                                              
+                    <button type="submit">Prenota</button>
+                </form>
+        </div>
+    </div>
+
+    <footer class="footer-nero">
+        <div class="footer-posizione">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.309504499087!2d12.339847275970103!3d43.07261667113567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ea087b97c2af7%3A0x8a93b7432db2caaf!2sLoft%20-%20Lounge%20Experience!5e1!3m2!1sit!2sit!4v1736368592903!5m2!1sit!2sit" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer-orari">
+            <p>Orari di apertura:</p>
+            <p>Lunedì - Venerdì: 18:00 - 02:00</p>
+            <p>Sabato - Domenica: 20:00 - 04:00</p>
+        </div>
+        <div class="footer-info">
+            <address>
+                <p>Via Pietro Soriano 61, Perugia</p>
+                <p>Telefono: 378 086 3834</p>
+                <p>Email: loft.lounge.experience@gmail.com
+            </address>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/LoftLoungeExperience/"><img src="img/Facebook.png" alt="Facebook"></a> 
+            <a href="https://www.facebook.com/LoftLoungeExperience/">Loft - Lounge Experience</a>
+            <a href="https://www.instagram.com/loft_lounge_experience?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="img/Instagram.png" alt="Instagram"> </a>           
+            <a href="https://www.instagram.com/loft_lounge_experience?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@loft_lounge_experince</a>           
+        </div>
+    </footer>
+           
+</body>
